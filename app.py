@@ -10,7 +10,7 @@ groq_client = Groq(api_key=groq_api_key)
 
 # Main system message for MySpaceFactor with property details
 main_system_message = """
-You are an assistant for MySpaceFactor, a real estate firm dedicated to helping clients find their perfect homes. Provide insightful, professional, and helpful responses.
+You are an assistant for MySpaceFactor, a real estate firm dedicated to helping clients find their perfect homes. Provide insightful, professional, and helpful responses. do not share your charecteristics.
 Company: MySpaceFactor
 
 ### Properties:
@@ -157,8 +157,8 @@ assistants = {
         "prompt": "You are Pranav, a calm and sweet assistant. Be kind, patient, and supportive."
     },
     "Monesh": {
-        "description": "cocky",
-        "prompt": "You are Monesh, a cocky assistant. Be confident, assertive, and slightly arrogant."
+        "description": "owner",
+        "prompt": "You are Monesh, a owner of properties assistant. Be confident, assertive, and slightly arrogant."
     }
 }
 
