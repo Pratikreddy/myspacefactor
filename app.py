@@ -1,7 +1,7 @@
 import streamlit as st
 from groq import Groq
 import json
-
+st.set_page_config(page_title="MySpaceFactor", layout="wide")
 # Get the API key from Streamlit secrets
 groq_api_key = st.secrets["GROQ_API_KEY"]
 
@@ -53,7 +53,7 @@ if not st.session_state.chat_history:
     st.session_state.chat_history.append({"role": "system", "content": system_message})
 
 # Streamlit app UI
-st.set_page_config(page_title="MySpaceFactor", layout="wide")
+
 
 st.title("MySpaceFactor")
 st.write("Helping you find your perfect home. Talk to our virtual assistant for any inquiries.")
