@@ -190,8 +190,8 @@ if not st.session_state.chat_history:
     st.session_state.chat_history.append({"role": "system", "content": system_message})
 
 # Display selected assistant's description
-st.write(f"**Current Assistant: {st.session_state.selected_assistant}**")
-st.write(assistants[st.session_state.selected_assistant]['description'])
+#st.write(f"**Current Assistant: {st.session_state.selected_assistant}**")
+#st.write(assistants[st.session_state.selected_assistant]['description'])
 
 # Display chat history
 for message in st.session_state.chat_history:
