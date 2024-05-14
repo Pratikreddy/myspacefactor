@@ -13,8 +13,12 @@ groq_client = Groq(api_key=groq_api_key)
 def log_conversation():
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     log_entry = f"{timestamp} - {json.dumps(st.session_state.chat_history)}\n"
-    with open("log.txt", "a") as log_file:
-        log_file.write(log_entry)
+    try:
+        with open("log.txt", "a") as log_file:
+            log_file.write(log_entry)
+        st.write("Log entry created successfully.")
+    except Exception as e:
+        st.write(f"Error logging conversation: {e}")
 
 # Main system message for MySpaceFactor with property details
 main_system_message = """
